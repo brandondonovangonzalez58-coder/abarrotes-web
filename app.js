@@ -20,6 +20,11 @@ let productos = [
   { id: 18, nombre: 'Tortillas',    precio: 20.0, categoria: 'despensa',   icono: 'fa-bread-slice' },
   { id: 19, nombre: 'Agua',         precio: 12.0, categoria: 'bebidas',    icono: 'fa-bottle-water' },
   { id: 20, nombre: 'Limones',      precio: 25.0, categoria: 'frutas',     icono: 'fa-lemon' }
+
+
+
+  { id: 21, nombre: 'Café',         precio: 45.0, categoria: 'bebidas',    icono: 'fa-mug-hot' }
+
 ];
 
 // ===== Carrito =====
@@ -258,3 +263,5 @@ document.getElementById('formProducto').addEventListener('submit', e => {
 // ===== Inicializar =====
 renderProductos();
 dibujarCarrito();
+
+
