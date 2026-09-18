@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abarrotes Don Chuy 🛒</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+  <header>
+    <h1><i class="fa-solid fa-store"></i> Abarrotes Don Chuy</h1>
+    <p><i class="fa-solid fa-truck-fast"></i> Todo lo que necesitas, al alcance de un clic</p>
+  </header>
+
+  <!-- Barra de búsqueda y filtros -->
+  <section class="barra-filtros">
+    <div class="buscador">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="buscar" placeholder="Buscar producto...">
+    </div>
+    <select id="categoria">
+      <option value="todas">Todas las categorías</option>
+      <option value="lacteos">Lácteos</option>
+      <option value="panaderia">Panadería</option>
+      <option value="despensa">Despensa</option>
+      <option value="bebidas">Bebidas</option>
+      <option value="limpieza">Limpieza</option>
+      <option value="carnes">Carnes</option>
+      <option value="frutas">Frutas y Verduras</option>
+    </select>
+    <button id="btnAdmin" class="btn-admin">
+      <i class="fa-solid fa-gear"></i> Administrar
+    </button>
+  </section>
+
+  <main>
+    <section class="productos-seccion">
+      <h2><i class="fa-solid fa-basket-shopping"></i> Productos <span id="contadorProductos" class="badge">20</span></h2>
+      <div id="productos" class="grid-productos"></div>
+      <p id="sinResultados" class="sin-resultados" style="display:none;">
+        <i class="fa-solid fa-face-frown"></i> No se encontraron productos
+      </p>
+    </section>
+
+    <aside class="carrito">
+      <h2><i class="fa-solid fa-cart-shopping"></i> Carrito <span id="contadorCarrito" class="badge-naranja">0</span></h2>
+      <ul id="carrito"></ul>
+      <p class="total">
+        <i class="fa-solid fa-coins"></i> Total: <b id="total">$0.00</b>
+      </p>
+      <button id="comprar" class="btn-comprar">
+        <i class="fa-solid fa-credit-card"></i> Comprar
+      </button>
+      <button id="vaciar" class="btn-vaciar">
+        <i class="fa-solid fa-trash"></i> Vaciar carrito
+      </button>
+      <p id="mensaje" class="mensaje"></p>
+    </aside>
+  </main>
+
+  <!-- Modal de administración -->
+  <div id="modalAdmin" class="modal">
+    <div class="modal-contenido">
+      <div class="modal-header">
+        <h2><i class="fa-solid fa-table-list"></i> Administrar Productos</h2>
+        <button id="cerrarModal" class="btn-cerrar">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <!-- Formulario para agregar producto -->
+      <form id="formProducto" class="form-producto">
+        <input type="text" id="nuevoNombre" placeholder="Nombre del producto" required>
+        <input type="number" id="nuevoPrecio" placeholder="Precio" step="0.01" min="0.01" required>
+        <select id="nuevaCategoria" required>
+          <option value="">Categoría...</option>
+          <option value="lacteos">Lácteos</option>
+          <option value="panaderia">Panadería</option>
+          <option value="despensa">Despensa</option>
+          <option value="bebidas">Bebidas</option>
+          <option value="limpieza">Limpieza</option>
+          <option value="carnes">Carnes</option>
+          <option value="frutas">Frutas y Verduras</option>
+        </select>
+        <select id="nuevoIcono">
+          <option value="fa-bottle-water">Botella</option>
+          <option value="fa-bread-slice">Pan</option>
+          <option value="fa-egg">Huevo</option>
+          <option value="fa-seedling">Planta</option>
+          <option value="fa-bowl-rice">Arroz</option>
+          <option value="fa-mug-hot">Taza</option>
+          <option value="fa-apple-whole">Manzana</option>
+          <option value="fa-carrot">Zanahoria</option>
+          <option value="fa-drumstick-bite">Carne</option>
+          <option value="fa-fish">Pescado</option>
+          <option value="fa-cheese">Queso</option>
+          <option value="fa-wine-bottle">Vino</option>
+          <option value="fa-spray-can">Spray</option>
+          <option value="fa-soap">Jabón</option>
+          <option value="fa-cookie">Galleta</option>
+          <option value="fa-pepper-hot">Chile</option>
+        </select>
+        <button type="submit" class="btn-agregar">
+          <i class="fa-solid fa-plus"></i> Agregar
+        </button>
+      </form>
+
+      <!-- Tabla de productos -->
+      <div class="tabla-contenedor">
+        <table class="tabla-productos">
+          <thead>
+            <tr>
+              <th>Icono</th>
+              <th>Nombre</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Acciones</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProductos"></tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p><i class="fa-regular fa-copyright"></i> 2024 Abarrotes Don Chuy — Actividad 03</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
