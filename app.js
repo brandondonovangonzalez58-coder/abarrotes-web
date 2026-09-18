@@ -24,7 +24,9 @@ let productos = [
 
 
     { id: 21, nombre: 'Café',         precio: 45.0, categoria: 'bebidas',    icono: 'fa-mug-hot' },
-    { id: 22, nombre: 'Galletas',     precio: 22.0, categoria: 'despensa',   icono: 'fa-cookie' }
+    { id: 22, nombre: 'Galletas',     precio: 22.0, categoria: 'despensa',   icono: 'fa-cookie' },
+      { id: 23, nombre: 'Chocolate',    precio: 35.0, categoria: 'despensa',   icono: 'fa-cookie' }
+
 ];
 
 // ===== Carrito =====
