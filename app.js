@@ -19,12 +19,12 @@ let productos = [
   { id: 17, nombre: 'Yogur',        precio: 18.5, categoria: 'lacteos',    icono: 'fa-bottle-water' },
   { id: 18, nombre: 'Tortillas',    precio: 20.0, categoria: 'despensa',   icono: 'fa-bread-slice' },
   { id: 19, nombre: 'Agua',         precio: 12.0, categoria: 'bebidas',    icono: 'fa-bottle-water' },
-  { id: 20, nombre: 'Limones',      precio: 25.0, categoria: 'frutas',     icono: 'fa-lemon' }
+  { id: 20, nombre: 'Limones',      precio: 25.0, categoria: 'frutas',     icono: 'fa-lemon' },
 
 
 
-  { id: 21, nombre: 'Café',         precio: 45.0, categoria: 'bebidas',    icono: 'fa-mug-hot' }
-
+    { id: 21, nombre: 'Café',         precio: 45.0, categoria: 'bebidas',    icono: 'fa-mug-hot' },
+    { id: 22, nombre: 'Galletas',     precio: 22.0, categoria: 'despensa',   icono: 'fa-cookie' }
 ];
 
 // ===== Carrito =====
