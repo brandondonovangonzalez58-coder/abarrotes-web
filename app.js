@@ -22,6 +22,8 @@ let productos = [
   { id: 20, nombre: 'Limones',      precio: 25.0, categoria: 'frutas',     icono: 'fa-lemon' },
 
 
+    { id: 22, nombre: 'Tortillas',    precio: 24.0, categoria: 'despensa',   icono: 'fa-bread-slice' },
+
   { id: 21, nombre: 'Café Molido',  precio: 65.0, categoria: 'despensa',   icono: 'fa-mug-hot' },
     { id: 21, nombre: 'Café',         precio: 45.0, categoria: 'bebidas',    icono: 'fa-mug-hot' },
     { id: 22, nombre: 'Galletas',     precio: 22.0, categoria: 'despensa',   icono: 'fa-cookie' },
